@@ -13,7 +13,7 @@ const io = new Server(server);
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://dtharanga023_db_user:2fcV3CrAa3qvpZac@cluster0.xfcmp4d.mongodb.net/taskmaster?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
